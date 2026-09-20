@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Samira Huber</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">SH.</a>
+      <ul class="nav-list">
+        <li><a href="index.html#publications" class="nav-link">publications</a></li>
+        <li><a href="index.html#education" class="nav-link">education</a></li>
+        <li><a href="index.html#experience" class="nav-link">experience</a></li>
+        <li><a href="index.html#teaching" class="nav-link">teaching</a></li>
+        <li><a href="index.html#news" class="nav-link">awards, talks & media</a></li>
+        <!-- <li><a href="blog.html" class="nav-link">blog</a></li> -->
+        <!-- <li><a href="sport.html" class="nav-link">sport</a></li> -->
+        <!-- <li><a href="index.html#contact" class="nav-link">contact</a></li> -->
+        <li>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <svg id="sun-icon" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg id="moon-icon" class="icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+        </li>
+      </ul>
+      <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+        <section class="blog-page section">
+      <div class="container">
+        <h2 class="section-title">BLOG</h2>
+        <!-- BLOG_LIST_START -->
+<article class="blog-overview-card">
+            <div class="blog-overview-image">
+              <img src="static/images/blog/blog1.jpg" alt="From Startup Founder to Robotics Researcher" />
+            </div>
+            <div class="blog-overview-body">
+              <p class="blog-date">June 15, 2026</p>
+              <h3>From Startup Founder to Robotics Researcher</h3>
+              <p class="blog-excerpt">Reflections on moving from building a sustainability startup to pursuing a PhD in robotics and AI.</p>
+              <a href="from-startup-to-robotics.html" class="blog-read-more">Read more</a>
+            </div>
+          </article>
+<article class="blog-overview-card">
+            <div class="blog-overview-image">
+              <img src="static/images/blog/blog2.jpg" alt="Lessons Learned Building EcoCheck" />
+            </div>
+            <div class="blog-overview-body">
+              <p class="blog-date">May 22, 2026</p>
+              <h3>Lessons Learned Building EcoCheck</h3>
+              <p class="blog-excerpt">What three years of climate-tech entrepreneurship taught me about product, team, and persistence.</p>
+              <a href="lessons-learned-ecocheck.html" class="blog-read-more">Read more</a>
+            </div>
+          </article>
+<article class="blog-overview-card">
+            <div class="blog-overview-image">
+              <img src="static/images/blog/blog3.jpg" alt="Women in Tech and Entrepreneurship" />
+            </div>
+            <div class="blog-overview-body">
+              <p class="blog-date">April 8, 2026</p>
+              <h3>Women in Tech and Entrepreneurship</h3>
+              <p class="blog-excerpt">Why representation matters and practical advice for women and non-binary people entering tech.</p>
+              <a href="women-in-tech-entrepreneurship.html" class="blog-read-more">Read more</a>
+            </div>
+          </article>
+        <!-- BLOG_LIST_END -->
+        <a href="index.html" class="btn btn-outline news-load-more">Back to home</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Samira Huber. Built with plain HTML, CSS & JS.</p>
+      <p class="footer-credit">Design inspired by <a href="https://rjshkhr.github.io/cleanfolio/" target="_blank" rel="noopener noreferrer">Cleanfolio</a> · <a href="https://github.com/rjshkhr/cleanfolio" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

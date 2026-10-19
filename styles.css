@@ -12,18 +12,23 @@
   --gradient-end: #c9d3f6;
 }
 
+/* Light theme: Terracotta. Previous Indigo light palette:
+  --bg: #f5f7ff; --bg-soft: #e8ecf9; --bg-card: #ffffff; --text: #1d2338;
+  --text-muted: #4d5878; --accent: #4a5fcb; --accent-light: #6b7fd6;
+  --border: #b7c5ff; --gradient-start: #4a5fcb; --gradient-end: #8ea4f7;
+  Other palettes are listed in palette-switcher.js. */
 [data-theme="light"] {
-  --bg: #f5f7ff;
-  --bg-soft: #e8ecf9;
+  --bg: #fbf7f2;
+  --bg-soft: #f2e9df;
   --bg-card: #ffffff;
-  --text: #1d2338;
-  --text-muted: #4d5878;
-  --accent: #4a5fcb;
-  --accent-light: #6b7fd6;
-  --border: #b7c5ff;
+  --text: #2b211b;
+  --text-muted: #6b574a;
+  --accent: #c0582c;
+  --accent-light: #d97a4e;
+  --border: #e8c7b0;
   --shadow: rgba(0, 0, 0, 0.1);
-  --gradient-start: #4a5fcb;
-  --gradient-end: #8ea4f7;
+  --gradient-start: #c0582c;
+  --gradient-end: #e08a5f;
 }
 
 * {
@@ -68,7 +73,7 @@ a {
 }
 
 [data-theme="light"] .header {
-  background: rgba(245, 247, 255, 0.85);
+  background: rgba(251, 247, 242, 0.85);
 }
 
 .nav {

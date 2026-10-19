@@ -9,16 +9,20 @@ const yearSpan = document.getElementById('year');
 yearSpan.textContent = new Date().getFullYear();
 
 // Theme handling
+// FORCED_THEME pins the site to 'light' or 'dark'. Set it to null to re-enable the
+// theme toggle (also uncomment the #theme-toggle button in the HTML pages).
+const FORCED_THEME = 'light';
 const storedTheme = localStorage.getItem('theme');
 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 function setTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
-  localStorage.setItem('theme', theme);
+  if (!FORCED_THEME) localStorage.setItem('theme', theme);
   updateThemeIcon(theme);
 }
 
 function updateThemeIcon(theme) {
+  if (!sunIcon || !moonIcon) return;
   if (theme === 'light') {
     sunIcon.classList.add('hidden');
     moonIcon.classList.remove('hidden');
@@ -28,16 +32,20 @@ function updateThemeIcon(theme) {
   }
 }
 
-if (storedTheme) {
+if (FORCED_THEME) {
+  setTheme(FORCED_THEME);
+} else if (storedTheme) {
   setTheme(storedTheme);
 } else {
   setTheme(prefersDark ? 'dark' : 'light');
 }
 
-themeToggle.addEventListener('click', () => {
-  const currentTheme = document.documentElement.getAttribute('data-theme');
-  setTheme(currentTheme === 'dark' ? 'light' : 'dark');
-});
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+  });
+}
 
 // Mobile menu
 mobileMenuToggle.addEventListener('click', () => {
